@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matching Game</title>
+
+    <link rel="stylesheet" href="./game.css">
+  </head>
+  <body>
+    <div id="board"></div>
+    <div id="score">Score: 0</div>
+    <div id="timer">Time: <span id="time">0</span> seconds</div>
+
+    <script>
+      const fruits = [
+        "🍎",
+        "🍐",
+        "🍊",
+        "🍋",
+        "🍉",
+        "🍇",
+        "🍒",
+        "🍓",
+        "🍑",
+        "🥝",
+      ];
+      const board = document.getElementById("board");
+      const scoreDisplay = document.getElementById("score");
+      const timerDisplay = document.getElementById("time");
+      let flippedCards = [];
+      let matchedCards = [];
+      let score = 0;
+      let time = 0;
+      let timer;
+
+      // Create a shuffled array of fruits
+      const shuffledFruits = shuffle([...fruits, ...fruits]);
+
+      // Create cards and add them to the board
+      shuffledFruits.forEach((fruit) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.addEventListener("click", () => flipCard(card, fruit));
+        board.appendChild(card);
+      });
+
+      // Function to shuffle an array
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      // Function to handle card flipping
+      function flipCard(card, fruit) {
+        if (
+          flippedCards.length < 2 &&
+          !flippedCards.includes(card) &&
+          !matchedCards.includes(card)
+        ) {
+          card.textContent = fruit; // Show the fruit
+          card.style.color = "black"; // Show the text color
+          flippedCards.push(card);
+          if (flippedCards.length === 2) {
+            setTimeout(checkMatch, 1000); // Check for a match after 1 second
+          }
+        }
+      }
+      const restartButton = document.createElement("button");
+      restartButton.textContent = "Restart Game";
+      restartButton.setAttribute("id", "restart");
+      restartButton.addEventListener("click", () => window.location.reload());
+      board.appendChild(restartButton);
+
+      // Function to check if two flipped cards match
+      function checkMatch() {
+        const [card1, card2] = flippedCards;
+        if (card1.textContent === card2.textContent) {
+          matchedCards.push(card1, card2);
+          score += 10;
+          scoreDisplay.textContent = "Score: " + score;
+          if (matchedCards.length === fruits.length * 2) {
+            clearInterval(timer); // Stop the timer
+            alert("Congratulations! You've matched all fruits.");
+          }
+        } else {
+          card1.textContent = ""; // Hide the fruit
+          card1.style.color = "transparent"; // Hide the text
+          card2.textContent = ""; // Hide the fruit
+          card2.style.color = "transparent"; // Hide the text
+        }
+        flippedCards = [];
+      }
+
+      // Timer function
+      function startTimer() {
+        timer = setInterval(() => {
+          time++;
+          timerDisplay.textContent = time 
+        }, 1000);
+      }
+
+      // Start the timer when the page loads
+      startTimer();
+    </script>
+  </body>
+</html>

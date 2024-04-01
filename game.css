@@ -1,0 +1,307 @@
+body {
+    background: url(./candybg.jpg) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  #board {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 5px;
+    margin: 200px auto;
+    margin-left: 600px;
+  }
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    cursor: pointer;
+    color: transparent;
+    width: 100px;
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  #score {
+    position: fixed;
+    margin-left: 1200px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: green;
+    position: relative;
+    top: -800px;
+  }
+  #timer {
+    position: fixed;
+    margin-left: 1200px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: green;
+    position: relative;
+    top: -800px;
+  }
+  #restart {
+    position: relative;
+    left: 230px;
+    top: 20px;
+    background-color: yellowgreen;
+    color: green;
+    font-size: x-large;
+    font-weight: bold;
+    height: fit-content;
+    border-radius: 5px;
+    border: 1px solid yellowgreen;
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+      background: url(./candybg.jpg) no-repeat center;
+      background-size: cover;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+      gap: 5px;
+      margin: 200px auto;
+      /* margin-left: 150px; */
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      cursor: pointer;
+      color: transparent;
+      width: 100px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    #score {
+      position: fixed;
+      margin-left: 200px;
+      font-size: x-large;
+      font-weight: bold;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #timer {
+      position: fixed;
+      margin-top: -40px;
+      margin-left: 350px;
+      font-size: x-large;
+      font-weight: bold;
+      width:60px;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #restart {
+      position: relative;
+      left: 230px;
+      top: 20px;
+      background-color: yellowgreen;
+      color: green;
+      font-size: x-large;
+      font-weight: bold;
+      height: fit-content;
+      border-radius: 5px;
+      border: 1px solid yellowgreen;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 750px) {
+    body {
+      background: url(./candybg.jpg) no-repeat center;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+      gap: 5px;
+      margin: 200px auto;
+      /* margin-left: 200px; */
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      cursor: pointer;
+      color: transparent;
+      width: 100px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    #score {
+      position: fixed;
+      margin-left: 240px;
+      font-size: medium;
+      font-weight: bold;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #timer {
+      position: fixed;
+      margin-top: -40px;
+      margin-left: 380px;
+      font-size: medium;
+      font-weight: bold;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #restart {
+      position: relative;
+      left: 230px;
+      top: 20px;
+      background-color: yellowgreen;
+      color: green;
+      font-size: x-large;
+      font-weight: bold;
+      height: fit-content;
+      border-radius: 5px;
+      border: 1px solid yellowgreen;
+    }
+  }
+  @media screen and (min-width: 751px) and (max-width: 1000px) {
+    body {
+      background: url(./candybg.jpg) no-repeat center;
+      background-size: cover;
+      overflow: hidden;
+    }
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+      gap: 5px;
+      margin: 200px auto;
+      margin-left: 100px;
+     
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      cursor: pointer;
+      color: transparent;
+      width: 100px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    #score {
+      position: fixed;
+      margin-left: 400px;
+      font-size: xx-large;
+      font-weight: bold;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #timer {
+      position: fixed;
+      margin-left: 400px;
+      font-size: xx-large;
+      font-weight: bold;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #restart {
+      position: relative;
+      left: 230px;
+      top: 20px;
+      background-color: yellowgreen;
+      color: green;
+      font-size: x-large;
+      font-weight: bold;
+      height: fit-content;
+      border-radius: 5px;
+      border: 1px solid yellowgreen;
+    }
+  }
+  @media screen and (min-width: 1001px) and (max-width: 1400px) {
+    body {
+      background: url(./candybg.jpg) no-repeat center;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 80px);
+      grid-template-rows: repeat(5, 80px);
+      gap: 5px;
+      margin: 200px auto;
+      margin-left: 400px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      cursor: pointer;
+      color: transparent;
+      width: 100px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    #score {
+      position: fixed;
+      margin-left: 800px;
+      font-size: x-large;
+      font-weight: bold;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #timer {
+      position: fixed;
+      margin-left: 800px;
+      font-size: x-large;
+      font-weight: bold;
+      color: green;
+      position: relative;
+      top: -800px;
+    }
+    #restart {
+      position: relative;
+      left: 230px;
+      top: 20px;
+      background-color: yellowgreen;
+      color: green;
+      font-size: x-large;
+      font-weight: bold;
+      height: fit-content;
+      border-radius: 5px;
+      border: 1px solid yellowgreen;
+    }
+  }
