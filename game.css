@@ -10,17 +10,20 @@ body {
     grid-template-rows: repeat(5, 100px);
     gap: 5px;
     margin: 200px auto;
-    margin-left: 600px;
+    margin-left: 400px;
   }
   .card {
-    background-color: white;
+    background-image: url("https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 45px;
     cursor: pointer;
-    color: transparent;
+    color:transparent;  /* Start with transparent text */
     width: 100px;
     transition: transform 0.3s ease;
   }
@@ -29,19 +32,20 @@ body {
   }
   #score {
     position: fixed;
-    margin-left: 1200px;
+    margin-left: 140px;
     font-size: xx-large;
-    font-weight: bold;
-    color: green;
+    font-weight: bolder;
+    color: yellowgreen;
     position: relative;
     top: -800px;
+    /* text-shadow: 1px 1px 3px whitesmoke;  */
   }
   #timer {
     position: fixed;
-    margin-left: 1200px;
+    margin-left: 140px;
     font-size: xx-large;
     font-weight: bold;
-    color: green;
+    color: yellowgreen;
     position: relative;
     top: -800px;
   }
@@ -74,17 +78,21 @@ body {
       /* margin-left: 150px; */
     }
     .card {
-      background-color: white;
+      background-image: url("https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 45px;
       cursor: pointer;
-      color: transparent;
+      color:transparent;  /* Start with transparent text */
       width: 100px;
       transition: transform 0.3s ease;
     }
+    
     .card:hover {
       transform: scale(1.05);
     }
@@ -137,14 +145,17 @@ body {
       /* margin-left: 200px; */
     }
     .card {
-      background-color: white;
+      background-image: url("https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 45px;
       cursor: pointer;
-      color: transparent;
+      color:transparent;  /* Start with transparent text */
       width: 100px;
       transition: transform 0.3s ease;
     }
@@ -199,14 +210,17 @@ body {
      
     }
     .card {
-      background-color: white;
+      background-image: url("https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 45px;
       cursor: pointer;
-      color: transparent;
+      color:transparent;  /* Start with transparent text */
       width: 100px;
       transition: transform 0.3s ease;
     }
@@ -260,14 +274,17 @@ body {
       margin-left: 400px;
     }
     .card {
-      background-color: white;
+      background-image: url("https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 45px;
       cursor: pointer;
-      color: transparent;
+      color:transparent;  /* Start with transparent text */
       width: 100px;
       transition: transform 0.3s ease;
     }

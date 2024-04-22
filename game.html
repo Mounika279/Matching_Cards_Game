@@ -62,7 +62,9 @@
           !matchedCards.includes(card)
         ) {
           card.textContent = fruit; // Show the fruit
-          card.style.color = "black"; // Show the text color
+          card.style.color = "white"; // Show the text color
+          card.style.backgroundImage = "none";
+
           flippedCards.push(card);
           if (flippedCards.length === 2) {
             setTimeout(checkMatch, 1000); // Check for a match after 1 second
@@ -79,6 +81,8 @@
       function checkMatch() {
         const [card1, card2] = flippedCards;
         if (card1.textContent === card2.textContent) {
+          card1.style.backgroundColor = "lightgray"; // Set background color to white
+    card2.style.backgroundColor = "lightgray";
           matchedCards.push(card1, card2);
           score += 10;
           scoreDisplay.textContent = "Score: " + score;
@@ -88,9 +92,12 @@
           }
         } else {
           card1.textContent = ""; // Hide the fruit
-          card1.style.color = "transparent"; // Hide the text
-          card2.textContent = ""; // Hide the fruit
-          card2.style.color = "transparent"; // Hide the text
+    card1.style.color = "white"; // Hide the text
+    card1.style.backgroundImage = "url('https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg')"; // Restore the question mark background
+
+    card2.textContent = ""; // Hide the fruit
+    card2.style.color = "white"; // Hide the text
+    card2.style.backgroundImage = "url('https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg')"; // Restore the question mark background
         }
         flippedCards = [];
       }
